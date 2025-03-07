@@ -72,7 +72,7 @@ background-repeat:no-repeat;
 .call-buton .cc-calto-action-ripple {
 	z-index: 99999;
 	position: fixed;
-	top: 3rem;
+	/* top: 3rem; */
     right: 2.3rem;
 	bottom: 8rem;
 	background: #dc3545;
