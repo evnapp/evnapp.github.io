@@ -30,19 +30,13 @@
 <!-- Table -->
 <style>
   table {
-    border-collapse: collapse; /* Gộp đường viền ô */
-    width: 100%; /* Chiều rộng bảng 100% */
-    font-family: arial, sans-serif; /* Phông chữ */
+      border-collapse: collapse;
+      width: 100%;
   }
-
   th, td {
-    border: 1px solid #dddddd; /* Đường viền ô */
-    text-align: left; /* Căn lề trái */
-    padding: 8px; /* Khoảng cách nội dung ô */
-  }
-
-  tr:nth-child(even) {
-    background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
   }
 </style>
 
@@ -195,7 +189,7 @@
     <div id="data-table"></div>
 
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbznMKwQx2nSaDquspw3T6qmYQRMhsVIMygV8OCshUBAFSeWlKF0TnKCYu1mlOolW1vT/exec'; // Thay bằng URL web app của bạn
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz46OQZ40DO_9np_8DQOWJ-alL6LcsAML4cNnSkAInpHqd-qkQfiHODgPbqZJKZR3y6/exec'; // Thay bằng URL web app của bạn
   
       fetch(scriptURL)
         .then(response => response.json())
@@ -229,11 +223,11 @@
 
   <!-- GG -->
   <div class="w3-row-padding w3-padding-16 w3-center city" id="gg">
-    <div class="w3-quarter">
+    <!-- <div class="w3-quarter">
       <img src="images/load/meeting.png" onclick="playClickSound()" class="gallery">
       <h3>Title</h3>
       <p>Label</p>
-    </div>
+    </div> -->
     <!-- 
     <div class="w3-quarter">
       <img src="images/1.kl/chloe.jpg" onclick="playClickSound1()" class="gallery">
