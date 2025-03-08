@@ -218,6 +218,33 @@
         });
     </script>
 
+<!-- Code edit Table -->
+<!-- const scriptURL = 'YOUR_WEB_APP_URL';
+//lấy dữ liệu.
+fetch(scriptURL)
+.then(response => response.json())
+.then(data => {
+    //hiện thị dữ liệu lên bảng HTML.
+});
+//hàm lưu dữ liệu.
+function Save(){
+    //Lấy dữ liệu đã chỉnh sửa
+    fetch(scriptURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+} -->
+
     <div class="clearfix"></div><!--chống nhảy khỏi table-->
   </div>
 
@@ -226,7 +253,7 @@
     <div id="data-table2"></div>
 
     <script>
-      const scriptURL2 = 'https://script.google.com/macros/s/AKfycbxdpTta39SYWwX6nkTsT-uRX7IBL-GufDoz21iI2pk9_69oDOmNhhthAGqX4gIv5Hcm/exec'; // Thay bằng URL web app của bạn
+      const scriptURL2 = 'https://script.google.com/macros/s/AKfycbykoFACs1S0ogoN_Pf0UXiYakCwDFKBVPSodwP0-dwmssO-ByTAzKFNaoQJPF6m0bgG/exec'; // Thay bằng URL web app của bạn
   
       fetch(scriptURL2)
         .then(response => response.json())
