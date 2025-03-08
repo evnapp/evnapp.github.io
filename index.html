@@ -189,7 +189,7 @@
     <div id="data-table"></div>
 
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzoNXaGF79B7Ry0FJudnxpQBCDPueYhlqo97SIGDBNKPCcOs6YC-62LPIIa-S3nyYU7/exec'; // Thay bằng URL web app của bạn
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz1Lg8QQVRg-IOtaLZYtZ0798MrK4Zf51CuRGhX3Jbzw3KukfkD5HPyz1GfuWR_fO0/exec'; // Thay bằng URL web app của bạn
   
       fetch(scriptURL)
         .then(response => response.json())
@@ -223,27 +223,37 @@
 
   <!-- GG -->
   <div class="w3-row-padding w3-padding-16 w3-center city" id="gg">
-    <!-- <div class="w3-quarter">
-      <img src="images/load/meeting.png" onclick="playClickSound()" class="gallery">
-      <h3>Title</h3>
-      <p>Label</p>
-    </div> -->
-    <!-- 
-    <div class="w3-quarter">
-      <img src="images/1.kl/chloe.jpg" onclick="playClickSound1()" class="gallery">
-      <h3>CHLOE</h3>
-      <p>NHẬT ANH</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="images/1.kl/danh.jpg" onclick="playClickSound2()" class="gallery">
-      <h3>ANH NGUYỄN</h3>
-      <p>NGUYỄN DUY ANH</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="images/1.kl/lincoln.jpg" onclick="playClickSound3()" class="gallery">
-      <h3>LINCOLN</h3>
-      <p>HỒNG LĨNH</p>
-    </div> -->
+    <div id="data-table"></div>
+
+    <script>
+      const scriptURL2 = 'https://script.google.com/macros/s/AKfycby14zDO9AmWNyQLkCq75Bc-jU6VuajZDWgtapYpb-XTz_1G8mDqBo3qKLOq_EDukGJK/exec'; // Thay bằng URL web app của bạn
+  
+      fetch(scriptURL2)
+        .then(response => response.json())
+        .then(data => {
+          // Tạo bảng HTML từ dữ liệu
+          let table = '<table>';
+          data.forEach((row, rowIndex) => {
+            if (rowIndex === 0 ){
+              table += '<thead><tr>';
+            }else{
+              table += '<tr>';
+            }
+            row.forEach(cell => {
+              table += `<td>${cell}</td>`;
+            });
+            if(rowIndex === 0 ){
+              table += '</tr></thead><tbody>';
+            }else{
+              table += '</tr>';
+            }
+          });
+          table += '</tbody></table>';
+  
+          // Hiển thị bảng trong div "data-table"
+          document.getElementById('data-table').innerHTML = table;
+        });
+    </script>
     <div class="clearfix"></div><!--chống nhảy khỏi table-->
   </div>
 
