@@ -259,11 +259,37 @@
 
   <!-- NET -->
   <div class="w3-row-padding w3-padding-16 w3-center city" style="display: none;" id="net">
-    <div class="w3-quarter">
-      <img src="images/load/media.png" onclick="playClickSound150()" class="gallery">
-      <h3>Title</h3>
-      <p>Label</p>
-    </div>
+    <div id="data-table3"></div>
+
+    <script>
+      const scriptURL3 = 'https://script.google.com/macros/s/AKfycbyiLDzVyqNnWtxqXsNbYgOXygc4HUEHh0LFwxXH4hqHedgKD0DALoHze_rXSKy3-CFu/exec'; // Thay bằng URL web app của bạn
+  
+      fetch(scriptURL3)
+        .then(response => response.json())
+        .then(data => {
+          // Tạo bảng HTML từ dữ liệu
+          let table = '<table>';
+          data.forEach((row, rowIndex) => {
+            if (rowIndex === 0 ){
+              table += '<thead><tr>';
+            }else{
+              table += '<tr>';
+            }
+            row.forEach(cell => {
+              table += `<td>${cell}</td>`;
+            });
+            if(rowIndex === 0 ){
+              table += '</tr></thead><tbody>';
+            }else{
+              table += '</tr>';
+            }
+          });
+          table += '</tbody></table>';
+  
+          // Hiển thị bảng trong div "data-table"
+          document.getElementById('data-table3').innerHTML = table;
+        });
+    </script>
     
     <div class="clearfix"></div>
   </div>
